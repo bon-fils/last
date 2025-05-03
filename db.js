@@ -1,5 +1,3 @@
-const sqlite3 = require('sqlite3').verbose();
-
 // Create or connect to the SQLite database file
 const db = new sqlite3.Database('./ecommerce', (err) => {
   if (err) {
