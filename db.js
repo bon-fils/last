@@ -1,9 +1,15 @@
-// Create or connect to the SQLite database file
+const sqlite3 = require('sqlite3').verbose(); // <-- ADD THIS
 const db = new sqlite3.Database('./ecommerce', (err) => {
   if (err) {
     return console.error('Error opening database:', err.message);
   }
-  console.log('✅ Connected to SQLite database');
+  console.log('Connected to SQLite database');
+
+  // your create table logic...
+});
+
+module.exports = db;
+
 
   // Create productz table if not exists
   const createProductzTable = `
